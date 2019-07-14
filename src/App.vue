@@ -11,7 +11,7 @@ import sampleForm from './components/form/index.vue'
 export default {
   name: 'app',
   components: {
-    sampleForm
+    sampleForm,
   }
 }
 </script>

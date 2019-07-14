@@ -21,6 +21,7 @@
   import KForm from "./Form";
   import KFormItem from "./FormItem";
   import KInput from "./Input";
+  import Notice from '../notice/index.vue'
 
   export default {
     components: {
@@ -40,11 +41,12 @@
     methods: {
       submitForm(form){
         this.$refs[form].validate( valid => {
-          if(valid){
-            alert("登陆成功！")
-          }else{
-            alert("校验失败！")
-          }
+          const notice = this.$create(Notice, {
+            title: "社会你杨哥喊你来搬砖",
+            message: valid ? "请求登录!" : "校验失败!",
+            duration: 1000        
+          })  
+          notice.show();
         })
         
       }

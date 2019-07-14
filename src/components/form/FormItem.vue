@@ -34,7 +34,7 @@
         const value = this.form.model[this.prop];
         const rules = this.form.rules[this.prop];
 
-        console.log(this.prop);   //  username/password
+        // console.log(this.prop);   //  username/password
         //校验
         const desc = {[this.prop]: rules};
         const schema = new Schema(desc);
